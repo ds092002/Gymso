@@ -34,145 +34,158 @@ label.logo {
 }
 
 /* Navbar */
-nav ul{
+/* Base Navbar */
+nav ul {
   float: right;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li{
+nav ul li {
   display: inline-block;
   line-height: 50px;
 }
 
-nav ul li a{
+nav ul li a {
   text-decoration: none;
   color: #fff;
   text-transform: capitalize;
   font-size: 15px;
   padding: 8px 20px;
 }
+
 .navbar nav a.active {
   color: #f13a11;
   transition: 0.5s;
 }
-.navbar nav a:hover{
+
+.navbar nav a:hover {
   color: #f13a11;
 }
 
-#checkbtn{
+/* Toggle icons */
+#checkbtn {
   float: right;
   line-height: 50px;
   margin-right: 10px;
   font-size: 25px;
   color: #f13a11;
   display: none;
+  cursor: pointer;
 }
 
-#check{
+#check {
   display: none;
 }
 
-#check:checked ~ ul{
+.menu-icon,
+.cancel-icon {
+  color: #f13a11;
+  font-size: 25px;
+  display: none;
+}
+
+#checkbtn .cancel-icon {
+  display: none;
+}
+
+#check:checked ~ nav ul {
   left: 0;
 }
 
-.social-icon{
-  position: relative;
-  gap: -1px !important;
-  left: 4px;
-}
-@media (max-width: 400px) {
-  label.logo{
-    text-wrap: nowrap;
-    font-size: 25px;
-    margin: 0 50px;
-  }
+#check:checked ~ #checkbtn .menu-icon {
+  display: none;
 }
 
-@media (max-width: 1024px){
-  label.logo{
-    text-wrap: nowrap;
+#check:checked ~ #checkbtn .cancel-icon {
+  display: block;
+}
+
+/* Social Icons */
+.social-icon {
+  display: inline-flex;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.social-icon li {
+  display: inline-block;
+}
+
+.h_icon {
+  color: #fff;
+  font-size: 18px;
+  padding: 0 11px;
+  transition: 0.5s;
+}
+
+.facbook:hover {
+  color: #1877f2;
+}
+
+.twitter:hover {
+  color: #1da1f2;
+}
+
+.insta:hover {
+  color: plum;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  label.logo {
+    white-space: nowrap;
     margin: 0 30px;
   }
-  nav ul li a{
-    text-decoration: none;
-    color: #fff;
-    text-transform: capitalize;
-    font-size: 15px;
+
+  nav ul li a {
     padding: 2px 7px;
+    font-size: 15px;
     line-height: 50px;
   }
-  nav ul li{
+
+  nav ul li {
     display: inline;
-    text-align: center;
-    line-height: 40px;
     margin: 5px;
   }
 }
 
-@media (max-width: 991px){
-  label.logo{
-    text-wrap: nowrap;
-    margin: 0 30px;
-  }
-
-  #checkbtn{
+@media (max-width: 991px) {
+  #checkbtn {
     display: block;
   }
 
-  nav ul{
+  nav ul {
     width: 100%;
     height: 100vh;
     background-color: #000;
     position: fixed;
     top: 80px;
     left: -100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     transition: 0.4s;
+    z-index: 999;
   }
 
-  nav ul li{
+  nav ul li {
     display: block;
     text-align: center;
-    line-height: 40px;
-    margin: 10px;
+    margin: 20px 0;
   }
 
   .social-icon {
-    display: flex;
     justify-content: center;
-    gap: 10px;
-    padding: 0px 0;
+    padding: 20px 0;
+    margin-top: 10px;
   }
 
-  .social-icon li {
-    display: inline-block;
+  .menu-icon {
+    display: inline;
   }
 }
-
-
-/* Icon */
-.h_icon {
-  color: #fff;
-  font-size: 18px;
-  padding: 0 11px;
-  transition: 0.5;
-}
-
-.facbook:hover {
-  color: #1877f2;
-  transition: 0.5s;
-}
-
-.twitter:hover {
-  color: #1da1f2;
-  transition: 0.5s;
-}
-
-.insta:hover {
-  color: plum;
-  transition: 0.5s;
-}
-
 /* Baneer */
 .banner {
   background-image: url(image/first_picture.jpg);
