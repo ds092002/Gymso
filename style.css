@@ -141,7 +141,7 @@ nav ul li a{
     display: flex;
     justify-content: center;
     gap: 10px;
-    padding: 10px 0;
+    padding: 0px 0;
   }
 
   .social-icon li {
