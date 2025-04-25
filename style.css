@@ -6,6 +6,10 @@
   scroll-behavior: smooth;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Header */
 .headSection {
   background-color: #171819;
