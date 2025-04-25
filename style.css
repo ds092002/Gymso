@@ -33,7 +33,6 @@ label.logo {
   transform: 0.5s;
 }
 
-/* Navbar */
 nav ul{
   float: right;
   list-style-type: none;
@@ -172,6 +171,14 @@ nav ul li a{
   color: plum;
   transition: 0.5s;
 }
+
+/* Extra small screens */
+@media (max-width: 400px) {
+  .logo {
+    font-size: 22px;
+  }
+}
+
 
 /* Baneer */
 .banner {
