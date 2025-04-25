@@ -1092,6 +1092,27 @@ h2 {
   border: 1px solid #f13a11;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+input, textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form_btn {
+  background-color: #f13a11;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .contact_section {
